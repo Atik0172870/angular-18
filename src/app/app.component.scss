@@ -1,0 +1,33 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+main.main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card-body.home-body {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.left-menu {
+  flex: 0 0 auto;
+}
+
+.right-body {
+  flex: 1 1 auto;
+  overflow: auto;
+}

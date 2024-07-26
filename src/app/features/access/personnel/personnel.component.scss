@@ -1,0 +1,179 @@
+.personnel-page {
+    .icon-size {
+        font-size: 16px;
+    }
+
+    .drop-menu-left {
+        left: -8.3rem !important;
+        right: auto !important;
+    }
+
+    .card-shadow {
+        box-shadow: 0 1px 2px 0px #bdbdbd;
+    }
+
+    .selected-bg {
+        background-color: #cee7e7;
+    }
+
+    .selected-color {
+        color: royalblue;
+    }
+
+    .btn-font-size {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .dropdown-item {
+        font-size: 12px;
+    }
+
+    .personnel-grid {
+        font-size: 11px;
+
+        .select-person {
+            td {
+                background-color: #cee7e7;
+
+                .fa {
+                    color: royalblue
+                }
+            }
+        }
+
+        .grid-panel-body {
+            padding: 0rem;
+
+            .grid-table {
+                font-size: 11px;
+
+                .grid-table-header {
+                    font-weight: bold;
+                    border-bottom: 1px solid #ddd;
+                }
+
+                .grid-table-body {
+                    cursor: pointer;
+                    height: 37vh;
+                    overflow: auto;
+
+                    .sub-badge {
+                        border: 1px solid white;
+                        background-color: #e2e2e2;
+                    }
+
+                    .select-person {
+                        background-color: #cee7e7;
+
+                        .fa {
+                            color: royalblue
+                        }
+                    }
+
+                    .row {
+                        border-bottom: 1px solid #ddd;
+                        padding: 0px;
+                        padding-top: 2px;
+                        padding-bottom: 2px;
+                        margin: 0rem;
+                    }
+
+                    .show-mobile-header {
+                        display: none;
+                    }
+
+                    .grid-selected-item {
+                        background-color: #ddd;
+                    }
+
+                    @media only screen and (max-width: 768px) {
+
+                        /* For mobile phones: */
+                        .show-mobile-header {
+                            display: block;
+                            font-weight: bold;
+                        }
+
+                        .disp-flex {
+                            display: flex;
+                            align-items: center;
+                            padding: 4px;
+                            gap: 0.5rem;
+                        }
+                    }
+                }
+
+                .grid-table-button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+
+                    .btn {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .personnel-input {
+        .personnel-input-card {
+            .personnel-input-card-body {
+                .personnel-input-group {
+                    .personnel-input-group-label {
+                        width: 37%;
+                    }
+                }
+
+                .access-group-card {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+    .access-group-card {
+        .selected-accgroup {
+            background-color: #cee7e7;
+        }
+    }
+
+    // @media only screen and (max-width: 768px) {
+
+    //     /* For mobile phones: */
+    //     .personnel-body {
+    //         display: flex;
+    //         flex-direction: column;
+    //     }
+
+    // }
+
+
+    @keyframes refresh {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .refresh {
+        animation: refresh 1s linear infinite;
+    }
+
+    .input-group-text {
+        font-size: 12px;
+    }
+
+    .user-info-tab {
+        .label-with {
+            width: 30%;
+        }
+
+    }
+}

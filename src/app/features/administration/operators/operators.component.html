@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <app-basic-search (searchEvent)="onSearch($event)" (clearEvent)="onClear()" (showAllEvent)="onShowAll()"></app-basic-search>
+  <app-table [columns]="columns"
+             [dataSource]="operators"
+             [sortBy]="sortBy"
+             [sortDirection]="sortDirection"
+             (sortChange)="onSortChange($event)">
+  </app-table>
+  <app-pagination-container [totalCount]="totalCount"
+                            [currentPage]="currentPage"
+                            [pageSize]="pageSize"
+                            (pageChange)="onPageChange($event)">
+  </app-pagination-container>
+</div>

@@ -1,0 +1,4 @@
+<div class="pagination-container d-flex justify-content-between align-items-center mt-0">
+  <label>Count: {{ totalCount }}</label>
+  <app-pagination [currentPage]="currentPage" [totalItems]="totalCount" [pageSize]="pageSize" (pageChange)="onPageChange($event)"></app-pagination>
+</div>

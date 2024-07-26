@@ -1,0 +1,1 @@
+E:\TFS_Projects\AccessControl\MVP_2.0\src\mvp.client\obj\Debug\mvp.client.esproj.CoreCompileInputs.cache

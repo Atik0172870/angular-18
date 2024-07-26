@@ -1,0 +1,41 @@
+<div class="mt-5">
+  <h5 class="collapsible-header" (click)="toggleCollapse()">
+    <a class="text-decoration-none d-flex justify-content-between align-items-center" role="button" [attr.aria-expanded]="isCollapsed" aria-controls="advancedSearch">
+      <span class="header-text">
+        Advanced Search Options... (Click to {{isCollapsed ? 'Expand' : 'Collapse'}}...)
+      </span>
+    </a>
+    <i class="fa" [ngClass]="{'fa-chevron-down': isCollapsed, 'fa-chevron-up': !isCollapsed}"></i>
+  </h5>
+  <div class="collapse" [ngClass]="{'show': !isCollapsed}" id="advancedSearch">
+    <div class="card card-body">
+      <div class="row mb-3 align-items-center">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First Name" [(ngModel)]="search.operFName">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last Name" [(ngModel)]="search.operLName">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Company" [(ngModel)]="search.companyName">
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-primary me-2" (click)="searchData()">Search</button>
+          <button class="btn btn-secondary me-2" (click)="clearSearch()">Clear</button>
+          <button class="btn btn-info" (click)="showAll()">Show All</button>
+        </div>
+        <div class="col-auto">
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="timeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ selectedTimeFormat }}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="timeDropdown">
+              <li><a class="dropdown-item" href="#" (click)="changeTimeFormat('As Local Time')">As Local Time</a></li>
+              <li><a class="dropdown-item" href="#" (click)="changeTimeFormat('As UTC')">As UTC</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

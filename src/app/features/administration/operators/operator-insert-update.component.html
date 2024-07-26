@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <h2>Operator Details</h2>
+  <form [formGroup]="operatorForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="operFName">First Name</label>
+      <input type="text" id="operFName" class="form-control" formControlName="operFName">
+    </div>
+
+    <div class="form-group">
+      <label for="operLName">Last Name</label>
+      <input type="text" id="operLName" class="form-control" formControlName="operLName">
+    </div>
+
+    <div class="form-group">
+      <label for="operLoginName">Login Name</label>
+      <input type="text" id="operLoginName" class="form-control" formControlName="operLoginName">
+    </div>
+
+    <div class="form-group">
+      <label for="autoAckTime">Auto Ack Time</label>
+      <input type="number" id="autoAckTime" class="form-control" formControlName="autoAckTime">
+    </div>
+
+    <div class="form-group">
+      <label for="lastUpdated">Last Updated</label>
+      <input type="date" id="lastUpdated" class="form-control" formControlName="lastUpdated">
+    </div>
+
+    <div class="form-group">
+      <label for="companyId">Company ID</label>
+      <input type="number" id="companyId" class="form-control" formControlName="companyId">
+    </div>
+
+    <!-- Add other form controls as needed -->
+
+    <button type="submit" class="btn btn-primary" [disabled]="operatorForm.invalid">Save</button>
+  </form>
+</div>

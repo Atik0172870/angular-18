@@ -1,0 +1,14 @@
+<main class="p-0 m-0 main-container container-fluid">
+  <div class="card h-100">
+    <app-header></app-header>
+    <div class="card-body home-body d-flex align-items-stretch gap-1 p-0">
+      <app-menu class="border-end left-menu h-100 p-0 bg-light d-flex flex-column gap-3"></app-menu>
+      <div class="right-body h-100 p-0 overflow-auto w-100">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <div class="card-footer">
+      <app-footer [buildVersion]="'90.0.11.710'" [companyId]="'60554'"></app-footer>
+    </div>
+  </div>
+</main>

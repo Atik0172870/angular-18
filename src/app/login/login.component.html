@@ -1,0 +1,45 @@
+<div class="container d-flex h-100 justify-content-center align-items-center">
+  <div class="row w-100 justify-content-center">
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <div class="text-center mb-4">
+            <img src="assets/img/mvp.png" alt="Logo" class="img-fluid" />
+          </div>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div *ngIf="loginForm.invalid && loginForm.touched" class="text-danger">
+              Please fill out the form correctly.
+            </div>
+            <h4 class="text-center mb-4">User Login</h4>
+            <div class="mb-3">
+              <label for="account" class="form-label">Account:</label>
+              <input formControlName="account" type="text" class="form-control" id="account" placeholder="Account" required />
+              <div *ngIf="loginForm.get('account')!.invalid && loginForm.get('account')!.touched" class="text-danger">
+                Account is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="userName" class="form-label">User Name:</label>
+              <input formControlName="userName" type="text" class="form-control" id="userName" placeholder="User Name" required />
+              <div *ngIf="loginForm.get('userName')!.invalid && loginForm.get('userName')!.touched" class="text-danger">
+                User Name is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password:</label>
+              <input formControlName="password" type="password" class="form-control" id="password" placeholder="Password" required />
+              <div *ngIf="loginForm.get('password')!.invalid && loginForm.get('password')!.touched" class="text-danger">
+                Password is required.
+              </div>
+            </div>
+            <div class="form-check mb-3">
+              <input type="checkbox" formControlName="rememberMe" id="rememberMe" class="form-check-input" />
+              <label for="rememberMe" class="form-check-label">Remember Me</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

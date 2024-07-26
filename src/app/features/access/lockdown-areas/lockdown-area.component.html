@@ -1,0 +1,27 @@
+<mat-table [dataSource]="dataSource" matSort>
+
+  <ng-container matColumnDef="companyName">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Company </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.companyName}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="areaNo">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Area No. </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.areaNo}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="areaName">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Area Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.areaName}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="lastUpdated">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Last Edit </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.lastUpdated | date:'short'}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+<mat-paginator [length]="dataSource.data.length" [pageSize]="10"></mat-paginator>

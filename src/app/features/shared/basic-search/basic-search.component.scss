@@ -1,0 +1,50 @@
+.collapsible-header {
+  background-color: #f4f4f4;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collapsible-header .header-text {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.collapsible-header i {
+  margin-left: auto;
+}
+
+.search-options {
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+.search-fields {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 576px) {
+  .search-fields input {
+    flex: 1 1 auto;
+    min-width: 200px;
+  }
+}
+
+.dropdown {
+  align-self: center;
+}
+
+.card-body .row {
+  display: flex;
+  align-items: center;
+}
+
+.card-body .col-auto {
+  display: flex;
+  align-items: center;
+}

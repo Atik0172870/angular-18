@@ -1,0 +1,10 @@
+<div class="dropdown dropend d-flex align-items-center" *ngFor="let item of menuItem; trackBy: trackByIndex">
+  <button type="button" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i [class]="item.menuIcon" aria-hidden="true"></i>
+  </button>
+  <ul class="dropdown-menu shadow">
+    <li class="dropdown-item" *ngFor="let menu of item.menu; trackBy: trackByIndex" (click)="navigateToPage(menu)">
+      <i [class]="menu.icon" aria-hidden="true"></i> {{ menu.name }}
+    </li>
+  </ul>
+</div>

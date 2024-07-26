@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.271090-alpha">
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupCommand>npm start</StartupCommand>
+    <JavaScriptTestFramework>Jasmine</JavaScriptTestFramework>
+    <!-- Allows the build (or compile) script located on package.json to run on Build -->
+    <ShouldRunBuildScript>false</ShouldRunBuildScript>
+    <!-- Folder where production build objects will be placed -->
+    <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\mvp.client\</BuildOutputFolder>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="src\app\administration\**" />
+    <None Remove="src\app\configuration\**" />
+    <None Remove="src\app\features\common\**" />
+    <None Remove="src\app\system\reports\**" />
+    <TypeScriptConfiguration Remove="src\app\administration\**" />
+    <TypeScriptConfiguration Remove="src\app\configuration\**" />
+    <TypeScriptConfiguration Remove="src\app\features\common\**" />
+    <TypeScriptConfiguration Remove="src\app\system\reports\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\app\core\header\" />
+  </ItemGroup>
+</Project>
